@@ -3,7 +3,7 @@ package Testing;
 // Q. Given array, find the element whose value is closest to zero.
 // If we have situation like, -7 and +7, the positive value must be considered
 
-public class temp {
+public class NEAREST_TO_ZERO {
     public static void main(String[] args) {
         int[] arr1 = new int[] {7, 5, 9, 1, 4};
         int[] arr2 = new int[] {-273};

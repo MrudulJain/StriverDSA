@@ -6,7 +6,7 @@
 package Binary_Search1;
 import java.util.*;
 
-public class implementUpperBound {
+public class ImplementUpperBound {
     public static void main(String[] args)
     {
         int n=8;

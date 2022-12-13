@@ -17,7 +17,7 @@ public class FrequencyCount {
         public static void frequencyCount(int arr[], int N, int P)
         {
             //using HashMap
-            HashMap<Integer,Integer> mp= new HashMap<Integer,Integer>();
+            /*HashMap<Integer,Integer> mp= new HashMap<Integer,Integer>();
             for(int i=0;i<N;i++)
             {
                 if(!mp.containsKey(arr[i]))
@@ -39,7 +39,7 @@ public class FrequencyCount {
                 {
                     arr[i]=mp.get(i+1);
                 }
-            }
+            }*/
 
             //using frequency array
             int n=Math.max(P,N);

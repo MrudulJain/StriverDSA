@@ -1,6 +1,6 @@
 package Binary_Search1;
-import java.util.*;
-public class arraySorted {
+
+public class ArraySorted {
     public static void main(String[] args)
     {
         int n=7;

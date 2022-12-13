@@ -4,8 +4,8 @@
 //TC: O(log n)
 
 package Binary_Search1;
-import java.util.*;
-public class searchInsertPosition {
+
+public class SearchInsertPosition {
     public static void main(String[] args)
     {
         int n=4;

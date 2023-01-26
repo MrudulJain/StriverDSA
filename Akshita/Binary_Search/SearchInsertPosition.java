@@ -3,7 +3,7 @@
 // Otherwise, find the index where k must be inserted to keep the array sorted.
 //TC: O(log n)
 
-package Binary_Search1;
+package Binary_Search;
 
 public class SearchInsertPosition {
     public static void main(String[] args)

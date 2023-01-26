@@ -3,7 +3,7 @@
 // Find the index of K(0-based indexing).
 //TC: O(log n)
 
-package Binary_Search1;
+package Binary_Search;
 
 public class ImplementLowerBound {
     public static void main(String[] args)

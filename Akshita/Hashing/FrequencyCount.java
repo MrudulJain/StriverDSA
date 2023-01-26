@@ -13,10 +13,10 @@ public class FrequencyCount {
             System.out.print(arr[i]+" ");
         }
     }
-        //Function to count the frequency of all elements from 1 to N in the array.
-        public static void frequencyCount(int arr[], int N, int P)
-        {
-            //using HashMap
+    //Function to count the frequency of all elements from 1 to N in the array.
+    public static void frequencyCount(int arr[], int N, int P)
+    {
+        //using HashMap
             /*HashMap<Integer,Integer> mp= new HashMap<Integer,Integer>();
             for(int i=0;i<N;i++)
             {
@@ -41,17 +41,17 @@ public class FrequencyCount {
                 }
             }*/
 
-            //using frequency array
-            int n=Math.max(P,N);
-            int[] freq=new int[n+1];
-            for(int i=0;i<N;i++)
-            {
-                freq[arr[i]]+=1;
-            }
-            for(int i=0;i<N;i++)
-            {
-                arr[i]=freq[i+1];
-            }
+        //using frequency array
+        int n=Math.max(P,N);
+        int[] freq=new int[n+1];
+        for(int i=0;i<N;i++)
+        {
+            freq[arr[i]]+=1;
+        }
+        for(int i=0;i<N;i++)
+        {
+            arr[i]=freq[i+1];
         }
     }
+}
 

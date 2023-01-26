@@ -1,8 +1,8 @@
 //Given a sorted array arr containing n elements with possibly duplicate elements.
 // The task is to find indexes of first and last occurrences of an element x in the given array.
 
-package Binary_Search1;
-import java.util.*;
+package Binary_Search;
+
 public class FirstAndLastOccurence {
     public static void main(String[] args)
     {

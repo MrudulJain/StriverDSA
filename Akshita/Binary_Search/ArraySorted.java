@@ -1,4 +1,4 @@
-package Binary_Search1;
+package Binary_Search;
 
 public class ArraySorted {
     public static void main(String[] args)

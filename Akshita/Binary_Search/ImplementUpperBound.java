@@ -3,7 +3,7 @@
 //Ceil of X is the smallest element which is greater than or equal to X. Ceil of X doesn’t exist if X is greater than greatest element of Arr[].
 //TC: O(n)
 
-package Binary_Search1;
+package Binary_Search;
 import java.util.*;
 
 public class ImplementUpperBound {

@@ -1,6 +1,8 @@
-//Given an array containing N integers and an integer K.
-//Your task is to find the length of the longest Sub-Array with the sum of the elements equal to the given value K.
-//TC: O(n^2)
+/*
+Given an array containing N integers and an integer K.
+Your task is to find the length of the longest Sub-Array with the sum of the elements equal to the given value K.
+TC: O(n^2)
+*/
 
 package Array_Easy;
 
@@ -30,3 +32,11 @@ public class LongestSubarray {
         return maxCount;
     }
 }
+
+/*
+In order to generate all the subarrays, we need two nested loops.
+First loop decides the starting index of the subarray and fixes the starting index
+The second loop is used to calculate the sum of the subarray by sliding the window to the right of the array
+A soon as the sum==k, if maxcount till now is smaller than count for this particular window, it gets replaced
+The window then moves on to the next set of elements
+*/

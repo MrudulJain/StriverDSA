@@ -1,5 +1,7 @@
-//Given an array arr[] of size n and an integer d, the task is to left rotate the array d indexes
-//TC: O(n)
+/*
+Given an array arr[] of size n and an integer d, the task is to left rotate the array d indexes
+TC: O(n)
+*/
 package Array_Easy;
 
 public class LeftRotate {
@@ -45,11 +47,20 @@ public class LeftRotate {
 }
 
 
-//[1] reverse the initial d elements
-//{2, 1, 3, 4, 5, 6, 7}
+/*
+Instead of creating another array to store the elements in the required way, or using 2 loops we do the following:
+[1] reverse the initial d elements by swapping the first element of the d elements with the last element
+The loop stops after the middle elements have been swapped.
+If the loop executed till i<n, all the elements would first get swapped with their (n-i)th elements
+and then get swapped to their original position,i.e. , the array would still remain same
+{2, 1, 3, 4, 5, 6, 7}
 
-//[2]reverse the remaining elements
-//{2, 1, 7, 6, 5, 4, 3}
+[2]reverse the remaining elements
+The loop executes till i<(n+d)/2, i.e., the middle of the (n-d) elements
+example: d=2, n=7; i<(7+2)/2=> i<4
+{2, 1, 7, 6, 5, 4, 3}
 
-//[3]reverse the entire array
-//{3, 4, 5, 6, 7, 1, 2}
+[3]reverse the entire array
+{3, 4, 5, 6, 7, 1, 2}
+*/
+

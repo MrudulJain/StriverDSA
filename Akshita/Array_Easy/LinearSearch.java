@@ -1,6 +1,8 @@
-//Given an array arr[] sorted in ascending order of size N and an integer K.
-// Check if K is present in the array or not.
-//TC:O(n)
+/*
+Given an array arr[] sorted in ascending order of size N and an integer K.
+Check if K is present in the array or not.
+TC:O(n)
+*/
 
 package Array_Easy;
 
@@ -23,3 +25,5 @@ public class LinearSearch {
         return -1;
     }
 }
+
+//Searches for the presence of an element from 0th index and returns the position if found

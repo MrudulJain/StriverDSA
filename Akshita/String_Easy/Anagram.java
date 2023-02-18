@@ -1,12 +1,14 @@
-//Given two strings s and t, return true if t is an anagram of s, and false otherwise.
-//An Anagram is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once.
-
+/*
+Given two strings s and t, return true if t is an anagram of s, and false otherwise.
+An Anagram is a word or phrase formed by rearranging the letters of a different word or phrase,
+typically using all the original letters exactly once.
+ */
 package String_Easy;
 public class Anagram {
     public static void main(String[] args)
     {
-        String s = "anagram";
-        String t="nagaram";
+        String s = "silent";
+        String t="listen";
         System.out.println(isAnagram(s, t));
     }
 
@@ -32,3 +34,9 @@ public class Anagram {
         return true;
     }
 }
+
+/*
+Uisng a frequency array of size 26 to mark the frequency of every letter present in the original string
+and then iterating through the anagram string and decrementing the values at the index of the letter
+if the values in the array are 0, it means that the string is an anagram/permutation of the original string
+ */

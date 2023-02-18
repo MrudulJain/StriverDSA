@@ -1,6 +1,8 @@
-//You are given a string num, representing a large integer.
-//Return the largest-valued odd integer (as a string) that is a non-empty substring of num, or an empty string "" if no odd integer exists.
-//A substring is a contiguous sequence of characters within a string.
+/*
+You are given a string num, representing a large integer.
+Return the largest-valued odd integer (as a string) that is a non-empty substring of num, or an empty string "" if no odd integer exists.
+A substring is a contiguous sequence of characters within a string.
+*/
 
 package String_Easy;
 public class LargestOddNumInAString {
@@ -22,3 +24,10 @@ public class LargestOddNumInAString {
         return "";
     }
 }
+
+/*
+We have to check and return the largest possible odd number present in the given string
+It can be done by iterating through the string from the right and returning the substring from 0th element
+to the first odd element found
+55036-> 3 is the first odd number we find which will give the largest odd number from the string(5503)
+*/

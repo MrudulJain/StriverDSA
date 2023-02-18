@@ -14,12 +14,14 @@ public class LargestElement {
         int max=arr[0];
         for(int i=0;i<n;i++)
         {
-            if(arr[i]>max)
+            if(arr[i]>max)    //[1]
             {
                 max=arr[i];
             }
         }
         return max;
     }
-
 }
+
+
+//[1] checks if the current element is greater than the max element found till now and if greater, then it gets stored

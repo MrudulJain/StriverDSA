@@ -14,7 +14,7 @@ public class CheckSorted {
     {
         for(int i=0;i<n-1;i++)
         {
-            if(arr[i]<=arr[i+1])
+            if(arr[i]<=arr[i+1])   //[1]
             {
                 continue;
             }
@@ -26,3 +26,7 @@ public class CheckSorted {
         return true;
     }
 }
+
+
+
+//[1]checks if the element on the right to it is greater than itself, thus checking for ascending order

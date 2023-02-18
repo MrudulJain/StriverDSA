@@ -5,12 +5,11 @@ package Array_Hard;
 import java.util.*;
 public class PascalTriangle {
     static void nthRowOfPascalTriangle(int n) {
-        // code here
-        ArrayList<Long> ans1=new ArrayList<Long>();
+        ArrayList<Long> ans1=new ArrayList<>();
         long C = 1;
         for (int i = 1; i <= n; i++) {
             ans1.add(C);
-            C =(C*(n - i)/ i)%1000000007;
+            C =(C*(n - i)/ i);
         }
         System.out.println(ans1);
     }
@@ -21,3 +20,4 @@ public class PascalTriangle {
         nthRowOfPascalTriangle( n);
     }
 }
+

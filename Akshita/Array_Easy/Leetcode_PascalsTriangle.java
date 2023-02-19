@@ -4,7 +4,7 @@ TC= O(n^2)
 SC= O(n^2)
 */
 
-package Array_Hard;
+package Array_Easy;
 import java.util.*;
 public class Leetcode_PascalsTriangle {
     public static void main(String[] args)
@@ -43,5 +43,5 @@ result.get(i-2) -> Gives the required element for (i-2)th row since i starts wit
 (i)    0 1 2 (j->)
 1      1
 2      1 1
-3      1 3 1
+3      1 2 1
 */

@@ -3,13 +3,14 @@
 package Array_Medium;
 import java.util.*;
 public class TwoSum {
-    public static void allPairs( long A[], long B[], long N, long M, long X) {
-        HashSet<Long> set = new HashSet <>();
-        for(long i : B) set.add(i);
-        Arrays.sort(A);
-        for(long i : A)
+    public static void allPairs( int A[], int B[], int N, int M, int X) {
+        HashSet<Integer> set = new HashSet <>();
+        for(int i : A) {
+            set.add(X - i);                           //[1]
+        }
+        for(int i : B)
         {
-            if (set.contains(X - i))
+            if (set.contains(i))                      //[2]
             {
                 System.out.println(i + " " + (X - i));
             }
@@ -20,9 +21,15 @@ public class TwoSum {
     {
         int n=5;
         int m=5;
-        long[] arr1= {1, 2, 4, 5, 7};
-        long[] arr2={5, 6, 3, 4, 8};
-        long x=9;
+        int[] arr1= {1, 2, 4, 5, 7};
+        int[] arr2={5, 6, 3, 4, 8};
+        int x=9;
         allPairs(arr1,arr2,n,m, x);
     }
 }
+
+/*
+[1]store the difference of elements in the first array and the given sum in a hashset
+[2]iterate through the second array and see if arr2[i] is present in the hashset or not,
+if it is present it means X is the sum of two elements from both the arrays, and it will print it
+*/

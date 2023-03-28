@@ -10,9 +10,9 @@ public class PrintInSprialManner {
         int right=m-1;
         int bottom=n-1;
         int count=0;
-        while(top<=bottom && left<=right)     //for printing column wise
+        while(top<=bottom && left<=right)         //for checking that the conditions dont run out of bounds
         {
-            for(int i=left;i<=right;i++)      //for printing row wise (opposite cuz its row first traversal)
+            for(int i=left;i<=right;i++)          //[1]
             {
                 int ele=matrix[top][i];
                 count++;
@@ -22,7 +22,8 @@ public class PrintInSprialManner {
                 }
             }
             top++;
-            for(int j=top;j<=bottom;j++)
+
+            for(int j=top;j<=bottom;j++)           //[2]
             {
                 int ele=matrix[j][right];
                 count++;
@@ -32,7 +33,8 @@ public class PrintInSprialManner {
                 }
             }
             right--;
-            if(top<=bottom)
+
+            if(top<=bottom)                        //[3]
             {
                 for(int i=right;i>=left;i--)
                 {
@@ -45,7 +47,8 @@ public class PrintInSprialManner {
                 }
                 bottom--;
             }
-            if(left<=right)
+
+            if(left<=right)                         //[4]
             {
                 for(int i=bottom;i>=top;i--)
                 {
@@ -65,6 +68,26 @@ public class PrintInSprialManner {
         int n=3,m=3,k=4;
         int[][] arr= {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
         findK(arr, n,m,k);
-
     }
 }
+
+/*
+The algorithm starts at the top-left corner of the matrix and moves towards the right column-wise,
+then towards the bottom row-wise, then towards the left column-wise, and finally towards the top row-wise.
+It keeps track of the current count of visited elements,
+and as soon as it reaches the kth element, it prints its value and exits the method.
+
+The algorithm first checks if the top boundary is less than or equal to the bottom boundary,
+and the left boundary is less than or equal to the right boundary.
+[1]Traverse the top row from left to right and print the kth element if found. Increment the top boundary.
+[2]Traverse the right column from top to bottom and print the kth element if found. Decrement the right boundary.
+[3]Traverse the bottom row from right to left and print the kth element if found. Decrement the bottom boundary.
+[4]Traverse the left column from bottom to top and print the kth element if found. Increment the left boundary.
+
+The if() conditions in [3,4] are used to check if the current spiral layer has been completed from top to bottom or left to right.
+for example, arr={{1, 2}}
+In this case, both top and bottom will be 0. The first loop will run and top will be incremented.
+Now, since top<=bottom, this loop will not run.
+
+This process keeps on repeating until the required element is found or all the indices of the matrix have been visited.
+*/

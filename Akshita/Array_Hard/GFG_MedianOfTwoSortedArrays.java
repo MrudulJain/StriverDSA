@@ -38,7 +38,6 @@ public class GFG_MedianOfTwoSortedArrays {
         {
             arr[k++]=b[j++];
         }
-
         if((n+m)%2==0)                //[4]
         {
             float num= (arr[(n+m)/2]+arr[((n+m)/2)-1]);

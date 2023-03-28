@@ -1,4 +1,5 @@
 //Find the contiguous sub-array(containing at least one number) which has the maximum sum and return its sum.
+//Also print the subarray with maximum sum.
 
 package Array_Medium;
 
@@ -7,19 +8,26 @@ public class KadanesAlgorithm {
     static void maxSubarraySum(int arr[], int n){
         long maxsum=arr[0];
         int cursum=0;
+        int start = 0, end = 0;
         for(int i=0;i<n;i++)
         {
             cursum+=arr[i];
             if(arr[i]>cursum)           //[1]
             {
                 cursum=arr[i];
+                start = i;
             }
             if(cursum>maxsum)          //[2]
             {
                 maxsum=cursum;
+                end = i;
             }
         }
-        System.out.println(maxsum);
+        System.out.println("Max sum: "+maxsum);
+        for(int i = start; i <= end; i++)
+        {
+            System.out.print(arr[i]+" ");
+        }
     }
     public static void main(String[] args)
     {

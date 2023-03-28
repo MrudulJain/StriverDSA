@@ -3,10 +3,7 @@
 package Array_Medium;
 import java.util.*;
 public class LongestConsecutiveSequenceInArray {
-    // arr[] : the input array
-    // N : size of the array arr[]
 
-    //Function to return length of longest subsequence of consecutive integers.
     static void findLongestConseqSubseq(int arr[], int N)
     {
         NavigableSet <Integer> set= new TreeSet<Integer>();
@@ -41,5 +38,9 @@ public class LongestConsecutiveSequenceInArray {
         int[] arr= {5, 6, 2, 1 ,4 ,3 ,0, 7};
         findLongestConseqSubseq(arr,n);
     }
-
 }
+
+/*
+This algorithm simply inserts the given values in ordered set and then checks the max length of continuous subsequences.
+If the current element(val)==value(last element+1), count is incremented. Else, count = 1 as the new subsequence starts.
+*/
